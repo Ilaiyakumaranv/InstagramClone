@@ -1,7 +1,19 @@
-import React from 'react'
-import { View, Text} from 'react-native'
-import LoginScreen from './screens/LoginScreen'
+import react from "react";
+import {NavigationContainer} from '@react-navigation/native';
+import  {createStackNavigation} from '@react-navigation/stack';
+import { AuthStackNavigator } from "./navigators/AuthStackNavigator";
 
-export default function App() {
-  return <LoginScreen />
+
+const RootStack = createStackNavigation();
+
+
+
+export default function () {
+  return (
+      <NavigationContainer>
+        <RootStack.Navigator>
+          <RootStack.Screen name={'AuthStack'} component={AuthStackNavigator()} />
+        </RootStack.Navigator>
+      </NavigationContainer>
+  );
 }

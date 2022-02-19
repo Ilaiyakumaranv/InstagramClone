@@ -7,7 +7,7 @@ import { Error } from "../components/Error";
 
 
 
-export function LoginScreen() {
+export function RegistrationScreen() {
   return (
    <View style={styles.container}> 
     <Image style= {styles.titleImage} source={require('../assets/image2.png')} />
@@ -31,10 +31,9 @@ export function LoginScreen() {
         textContentType='password'       
     />
 
-    <FilledButton title ={'Login'} style={styles.loginButton} onPress={() => {} }/>
+    <FilledButton title ={'REGISTER'} style={styles.loginButton} onPress={() => {} }/>
 
-    <TextButton title={' Have you an account? Create one'} onPress={() => {}} />
-
+   
    </View>
   );
 }
